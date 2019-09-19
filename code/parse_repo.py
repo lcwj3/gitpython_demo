@@ -27,6 +27,7 @@ def versions(path):
             commit_object = commit
             commit = commit.hexsha
             parsed_commit[commit] = {}
+            parsed_commit[commit]['committed_datetime'] = str(commit_object.committed_datetime)
             parsed_commit[commit]['branch'] = branch.name
 
             #b = commit_object.data_stream
